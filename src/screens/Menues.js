@@ -7,7 +7,7 @@ import {
   ActivityIndicator,
   TextInput,
 } from "react-native";
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import ItemCard from "../components/ItemCard";
 import { useQuery } from "@tanstack/react-query";
 import { getRestaurantById } from "../api/FoodDeliveryApi";

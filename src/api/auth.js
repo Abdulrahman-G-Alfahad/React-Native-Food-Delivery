@@ -4,6 +4,7 @@ import { setToken } from "./storage";
 const login = async (userInfo) => {
   console.log(userInfo);
   try {
+    const { data } = await instance.post("/auth/login", userInfo);
     await setToken(data.token);
     return data;
   } catch (error) {
@@ -24,6 +25,9 @@ const register = async (userInfo, image) => {
       uri: image,
     });
 
+    const { data } = await instance.post("/auth/register", formData, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
     await setToken(data.token);
     return data;
   } catch (error) {

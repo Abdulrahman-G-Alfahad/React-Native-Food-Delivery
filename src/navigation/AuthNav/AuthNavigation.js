@@ -8,7 +8,12 @@ import ROUTS from "..";
 const Stack = createNativeStackNavigator();
 const AuthNavigation = () => {
   return (
-    <Stack.Navigator initialRouteName={ROUTS.AUTH.LOGIN}>
+    <Stack.Navigator
+      initialRouteName={ROUTS.AUTH.LOGIN}
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen name={ROUTS.AUTH.LOGIN} component={Login} />
       <Stack.Screen name={ROUTS.AUTH.REGISTER} component={Register} />
     </Stack.Navigator>

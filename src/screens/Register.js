@@ -60,9 +60,6 @@ const Register = () => {
         justifyContent: "center",
       }}
     >
-      <View style={styles.header}>
-        <Text style={styles.headerText}>Register</Text>
-      </View>
       <View
         style={{
           width: "100%",
@@ -73,6 +70,7 @@ const Register = () => {
         }}
       >
         <View style={styles.form}>
+          <Text style={styles.headerText}>Register</Text>
           <TextInput
             style={styles.input}
             value={userInfo.username}
@@ -148,10 +146,14 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 10,
+    color: "white",
+    borderRadius: 10,
+    borderColor: "white",
   },
   headerText: {
     fontSize: 25,
     fontWeight: "bold",
     color: "#fff",
+    marginBottom: 10,
   },
 });

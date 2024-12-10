@@ -9,8 +9,6 @@ import { deleteToken } from "../../api/storage";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { UserContext } from "../../context/UserContext";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import Cart from "../../screens/Cart";
-import Profile from "../../screens/Profile";
 
 const Stack = createNativeStackNavigator();
 const RestaurantNavigation = () => {
